@@ -1,4 +1,4 @@
-FROM gcc:13.2.0
+FROM gcc:14.1.0
 
 RUN apt-get update && \
     apt-get install -y locales git procps gdb make binutils libc6-dev
