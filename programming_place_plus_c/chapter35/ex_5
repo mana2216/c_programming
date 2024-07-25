@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<assert.h>
+
+void *my_realloc(void *ptr, size_t size);
+
+void *my_realloc(void *ptr, size_t size) {
+  assert(size != 0);
+  void *tmp = realloc(ptr, size);
+  if (tmp == NULL) {
+    free(ptr);
+    fputs("reallocが失敗しました\n", stderr);
+    exit(EXIT_FAILURE);
+  }
+  return tmp;
+}
