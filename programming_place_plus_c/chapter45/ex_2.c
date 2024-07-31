@@ -4,7 +4,6 @@
 #include <limits.h>
 
 int main(int argc, char *argv[]) {
-  printf("%d", argc);
   if (argc < 4) {
     fputs("コマンドライン引数を正確に指定してください\n", stderr);
     exit(EXIT_FAILURE);
